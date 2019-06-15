@@ -8,7 +8,7 @@ The criteria for performance were as follows
 * Accuracy
 * Precision
 * Recall
-* Speed/performance (inferred from discussions with Dr. Hannes Krupa during kick-off ceremony)
+* Speed & lightweight (inferred from discussions with Dr. Hannes Krupa during kick-off ceremony)
 
 As such, a MobileNetV2 based classifier was chosen due to its lightweight footprint, low number of parameters, and capability for near real-time mobile-based recognition. 
 
@@ -77,7 +77,7 @@ Before each batch of images were fed into our network, they underwent a set of p
 
 Our model consists of the base MobileNetV2 model, with the top layers relaced with a two densely connected layers (of size 1024 and 196, respectively), separated by a 50% dropout layer to prevent overfitting. The network was pre-loaded with ImageNet weights, and training was done using an ADAM optimizer at a learning rate of 0.0002.
 
-As the car class of ImageNet is relatively small and varied, training of the base model weights was allowed beyond 75 layers of th base network, with fine-tuning permitted at 30 layers onwards. Fine-tuning was done using an RMSProp optimizer at a learning rate of 2E-5.The model was trained for 50 epochs, with fine-tuning permitted for 30 epochs.
+As the car class of ImageNet is relatively small and varied, training of the base model weights was allowed beyond 75 layers of th base network, with fine-tuning permitted at 30 layers onwards. Fine-tuning was done using an RMSProp optimizer at a learning rate of 2E-5.The model was trained for 50 epochs, with fine-tuning permitted for 15 epochs.
 
 
 ## Performance
@@ -87,5 +87,5 @@ As the car class of ImageNet is relatively small and varied, training of the bas
 
 A plot of accuracy and accuracy versus epochs during the inital training process is shown above.
 
-After training for 50 epochs, a mean validation acccuracy of 86.8% was achieved. After fine-tuning was executed for 10 epochs, this increased to 95%. As the training accuracy had reached close to 99%, training was stopped to prevent any overfitting to the training data.
+After training for 50 epochs, a mean validation acccuracy of 86.8% was achieved. After fine-tuning was executed for 15 epochs, this increased to 95%. As the training accuracy had reached close to 99%, training was stopped to prevent any overfitting to the training data.
 ## Instructions
