@@ -23,8 +23,7 @@ For training purposes, the dataset was split into training and validation datase
 The Stanford car dataset has been extensively studied on various networks, including on MobileNet platforms. 
 [Source](https://arxiv.org/pdf/1806.02987.pdf?fbclid=IwAR26yjKltuRmb9q9U8Dj3F-oGDXWVrp1UW_ipq3_ZanYmFWglijwbatqO2g)
 
-Our approach relies on extensive pre-processing and data augmentation process, detailed below:
-
+Our approach relied on extensive pre-processing data augmentation processes to improve the quality and quantity of training data available, together with a light MobileNetV2 architecture for possible mobile app-based rollout.
 
 ### Background cropping data augmentation
 
