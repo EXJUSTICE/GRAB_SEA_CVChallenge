@@ -52,7 +52,7 @@ To isolate this area from rest of the features within the raw image, a segmentat
 
 Before the images were fed into our network, they underwent a set of preprocessing data-augmentation methods derived from the Keras and Tensorflow libraries designed to improve the performance and robustness of our model.
 
-**Keras
+**Keras**
 
 * Rescaling
 * Shear-based transformations
@@ -60,7 +60,7 @@ Before the images were fed into our network, they underwent a set of preprocessi
 * Translations
 * Flipping
 
-**Tensorflow
+**Tensorflow**
 
 * Hue randomization via HSV
 * Saturation randomization
