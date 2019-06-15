@@ -14,5 +14,5 @@ As such, a MobileNetV2 based classifier was chosen due to its lightweight footpr
 
 ## Dataset
 ## Approach
-The Stanford car dataset has been extensively studied on various networks, including MobileNetV2 [Source] (https://arxiv.org/pdf/1806.02987.pdf?fbclid=IwAR26yjKltuRmb9q9U8Dj3F-oGDXWVrp1UW_ipq3_ZanYmFWglijwbatqO2g)
+The Stanford car dataset has been extensively studied on various networks, including MobileNetV2 [Source}(https://arxiv.org/pdf/1806.02987.pdf?fbclid=IwAR26yjKltuRmb9q9U8Dj3F-oGDXWVrp1UW_ipq3_ZanYmFWglijwbatqO2g)
 
