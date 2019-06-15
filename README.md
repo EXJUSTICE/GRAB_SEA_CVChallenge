@@ -81,8 +81,11 @@ As the car class of ImageNet is relatively small and varied, training of the bas
 
 
 ## Performance
+<p align="center">
+  <img src="https://github.com/EXJUSTICE/GRAB_SEA_CVChallenge/blob/master/accuracy.png" >
+</p>
 
-A plot of accuracy versus epochs during the inital training process is shown below.
+A plot of accuracy and accuracy versus epochs during the inital training process is shown above.
 
 After training for 50 epochs, a validation acccuracy of 80.7% was achieved. After fine-tuning was executed for 10 epochs, this increased to 95%. As the training accuracy had reached close to 99%, training was stopped to prevent any overfitting to the training data.
 ## Instructions
