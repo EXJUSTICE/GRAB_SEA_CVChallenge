@@ -13,7 +13,11 @@ The criteria for performance were as follows
 As such, a MobileNetV2 based classifier was chosen due to its lightweight footprint, low number of parameters, and capability for near real-time mobile-based recognition.
 
 ## Dataset
-The Stanford car dataset consists of 16185 images of automobiles of 196 classes. Despite it's large size, the number of images per class is relatively small, and as cars are visually highly similiar, this makes for a challenging exercise in make and model differentiation.
+The Stanford cars-196 dataset consists of 16185 images of automobiles of 196 classes. Despite it's large size, the number of images per class is relatively small, and as cars are visually highly similiar, this makes for a challenging exercise in make and model differentiation.
+
+For our approach, a version of the dataset pre-separated into folders was obtained from Kaggle. This is the exact same dataset, only with the training data arranged in their respective labelled directories for convenience.
+
+For training purposes, the dataset was split into training and validation datasets at a ratio of 80:20.
 
 ## Implementation
 The Stanford car dataset has been extensively studied on various networks, including on MobileNet platforms. 
@@ -22,3 +26,25 @@ The Stanford car dataset has been extensively studied on various networks, inclu
 Our approach relies on extensive pre-processing and data augmentation process, detailed below:
 
 
+### Background cropping data augmentation
+
+Figure 1 below displays a typical image of the Stanford Cars-196 dataset pre- and post- backgrund cropping.
+
+[Figure 1]
+
+
+Each image featured excessive amounts of background noise. While boundary boxes were provided by the dataset, it was decided that a YOLO-based cropping detector would be more scalable under real-world data collection circumstances. Such a detector was implemented in Notebook 1, and the outputs collected and stored on Google Drive as "Compressed Zip" 
+
+### Segmentation cropping data augmentation
+
+While different classes of vehicles, i.e. sedans and SUV's, are visually distinct, vehicles within the same class are harder to distinguish. This was believed to have led to a poor initial validation accuracy of less than 50%. It was identfied that the primary feature differences between vehicle model and maker of the same type were in the front and rear, respectively. 
+
+To isolate this area from rest of the features within the raw image, a segmentation croppng preprocessing-function was implemented. Briefly, this worked by dividing the image into two sets of halves, determined by width and height, respectively. A quartering function was also evaluated but found to perform worse, which was attributed to the incomplete nature of each quarter.
+
+
+### Just-In-Time data augmentation
+
+Before the images were fed into our network, they underwent a set of preprocessing data-augmentation methods derived from the Keras and Tensorflow libraries.
+
+
+### Architecture
