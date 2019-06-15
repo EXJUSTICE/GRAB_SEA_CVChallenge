@@ -10,7 +10,7 @@ The criteria for performance were as follows
 * Recall
 * Speed/performance (derived from discussions with judges during opening ceremony)
 
-As such, a MobileNetV2 based classifier was chosen due to its lightweight footprint, low number of parameters, and capability for near real-time mobile-based recognition.
+As such, a MobileNetV2 based classifier was chosen due to its lightweight footprint, low number of parameters, and capability for near real-time mobile-based recognition. For instructions to run this repository, please see the "Instructions" section of this README.
 
 ## Dataset
 The Stanford cars-196 dataset consists of 16185 images of automobiles of 196 classes. Despite it's large size, the number of images per class is relatively small, and as cars are visually highly similiar, this makes for a challenging exercise in make and model differentiation.
@@ -43,7 +43,27 @@ To isolate this area from rest of the features within the raw image, a segmentat
 
 ### Just-In-Time data augmentation
 
-Before the images were fed into our network, they underwent a set of preprocessing data-augmentation methods derived from the Keras and Tensorflow libraries.
+Before the images were fed into our network, they underwent a set of preprocessing data-augmentation methods derived from the Keras and Tensorflow libraries designed to improve the performance and robustness of our model.
+
+Keras
+* Rescaling
+* Shear-based transformations
+* Zoom-based transformations
+* Translations
+* Flipping
+
+Tensorflow
+
+* Hue randomization via HSV
+* Saturation randomization
+* Brightness randomization
+* Contrast randomization
+
 
 
 ### Architecture
+
+
+## Performance
+
+## Instructions
