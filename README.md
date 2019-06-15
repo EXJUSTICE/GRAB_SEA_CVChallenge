@@ -25,8 +25,8 @@ The Stanford Cars-196 dataset has been extensively studied on various networks, 
 
 Our approach relied on extensive pre-processing data augmentation processes to improve the quality and quantity of training data available, together with a light MobileNetV2 architecture for possible mobile app-based rollout.
 
-#### Background cropping data augmentation
----
+__#### Background cropping data augmentation__
+
 Figure 1 below displays a typical image of the Stanford Cars-196 dataset pre- and post- backgrund cropping.
 
 [Figure 1]
