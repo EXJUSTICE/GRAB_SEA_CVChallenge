@@ -63,6 +63,13 @@ Tensorflow
 
 ### Architecture
 
+Our model consists of the base MobileNetV2 model, with the top layers relaced with a two densely connected layers (of size 1024 and 196, respectively), separated by a 50% dropout layer to prevent overfitting. The network was pre-loaded with ImageNet weights, and training was done using an ADAM optimizer at a learning rate of 0.0002, while fine-tuning was done using an RMSProp optimizer at a learning rate of 2E-5.
+
+As the car class of ImageNet is relatively small and varied, training of the base model weights was allowed at 75 layers network, with fine-tuning permitted at 30 layers onwards.
+
+The model was trained for 50 epochs, with fine-tuning permitted for 30 epochs.
+
+
 
 ## Performance
 
