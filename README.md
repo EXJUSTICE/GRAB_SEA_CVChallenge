@@ -50,7 +50,7 @@ To isolate this area from rest of the features within the raw image, a segmentat
 
 #### __Just-In-Time data augmentation__
 
-Before the images were fed into our network, they underwent a set of preprocessing data-augmentation methods derived from the Keras and Tensorflow libraries designed to improve the performance and robustness of our model.
+Before the images were fed into our network, they underwent a set of preprocessing data-augmentation methods derived from the Keras and Tensorflow libraries designed to improve the performance and robustness of our model. While the Keras-based methods focused on translations and transformations, the Tensorflow library provided more advanced capabilities to modify the colorspace.
 
 **Keras**
 
@@ -62,7 +62,7 @@ Before the images were fed into our network, they underwent a set of preprocessi
 
 **Tensorflow**
 
-* Hue randomization via HSV
+* Hue randomization 
 * Saturation randomization
 * Brightness randomization
 * Contrast randomization
@@ -70,6 +70,10 @@ Before the images were fed into our network, they underwent a set of preprocessi
 
 
 #### __Architecture__
+
+<p align="center">
+  <img src="https://github.com/EXJUSTICE/GRAB_SEA_CVChallenge/blob/master/GrabSEAarchitecture.png" >
+</p>
 
 Our model consists of the base MobileNetV2 model, with the top layers relaced with a two densely connected layers (of size 1024 and 196, respectively), separated by a 50% dropout layer to prevent overfitting. The network was pre-loaded with ImageNet weights, and training was done using an ADAM optimizer at a learning rate of 0.0002, while fine-tuning was done using an RMSProp optimizer at a learning rate of 2E-5.
 
