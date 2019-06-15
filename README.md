@@ -50,7 +50,7 @@ To isolate this area from rest of the features within the raw image, a segmentat
 
 #### __Just-In-Time pre-processing__
 
-Before the images were fed into our network, they underwent a set of preprocessing data-augmentation methods derived from the Keras and Tensorflow libraries designed to improve the performance and robustness of our model. While the Keras-based methods focused on translations and transformations, the Tensorflow library provided more advanced capabilities to modify the colorspace.
+Before each batch of images were fed into our network, they underwent a set of preprocessing data-augmentation methods derived from the Keras and Tensorflow libraries designed to improve the performance and robustness of our model. While the Keras-based methods focused on translations and transformations, the Tensorflow library provided more advanced capabilities to modify the colorspace.
 
 **Keras**
 
