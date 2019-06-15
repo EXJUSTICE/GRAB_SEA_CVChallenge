@@ -8,7 +8,7 @@ The criteria for performance were as follows
 * Accuracy
 * Precision
 * Recall
-* Speed/performance (derived from discussions with judges during opening ceremony)
+* Speed/performance (inferred from discussions with Dr. Hannes Krupa during kick-off ceremony)
 
 As such, a MobileNetV2 based classifier was chosen due to its lightweight footprint, low number of parameters, and capability for near real-time mobile-based recognition. 
 
