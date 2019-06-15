@@ -45,7 +45,7 @@ Each image featured excessive amounts of background noise. While boundary boxes 
 
 While different classes of vehicles, i.e. sedans and SUV's, are visually distinct, vehicles within the same class are harder to distinguish. This was believed to have led to a poor initial validation accuracy of less than 50%. It was identfied that the primary feature differences between vehicle model and maker of the same type were in the front and rear, respectively. 
 
-To isolate this area from rest of the features within the raw image, a segmentation croppng preprocessing-function was implemented. Briefly, this worked by dividing the image into two sets of halves, determined by width and height, respectively. A quartering function was also evaluated but found to perform worse, which was attributed to the incomplete nature of each quarter.
+To isolate this area from rest of the features within the raw image, a segmentation cropping-based functiono was implemented. Briefly, this worked by dividing the image into two sets of halves, determined by width and height, respectively. A quartering function was also evaluated but found to perform worse, which was attributed to the each quarter possessing incomplete feature information.
 
 
 #### __Just-In-Time data augmentation__
