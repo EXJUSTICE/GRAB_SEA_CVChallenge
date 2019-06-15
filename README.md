@@ -13,19 +13,19 @@ The criteria for performance were as follows
 As such, a MobileNetV2 based classifier was chosen due to its lightweight footprint, low number of parameters, and capability for near real-time mobile-based recognition. For instructions to run this repository, please see the "Instructions" section of this README.
 
 ## Dataset
-The Stanford cars-196 dataset consists of 16185 images of automobiles of 196 classes. Despite it's large size, the number of images per class is relatively small, and as cars are visually highly similiar, this makes for a challenging exercise in make and model differentiation.
+The Stanford Cars-196 dataset consists of 16185 images of automobiles of 196 classes. Despite it's large size, the number of images per class is relatively small, and as cars are visually highly similiar, this makes for a challenging exercise in make and model differentiation.
 
 For our approach, a version of the dataset pre-separated into folders was obtained from Kaggle. This is the exact same dataset, only with the training data arranged in their respective labelled directories for convenience.
 
 For training purposes, the dataset was split into training and validation datasets at a ratio of 80:20.
 
 ## Implementation
-The Stanford car dataset has been extensively studied on various networks, including on MobileNet platforms. 
+The Stanford Cars-196 dataset has been extensively studied on various networks, including on MobileNet platforms. 
 [Source](https://arxiv.org/pdf/1806.02987.pdf?fbclid=IwAR26yjKltuRmb9q9U8Dj3F-oGDXWVrp1UW_ipq3_ZanYmFWglijwbatqO2g)
 
 Our approach relied on extensive pre-processing data augmentation processes to improve the quality and quantity of training data available, together with a light MobileNetV2 architecture for possible mobile app-based rollout.
 
-### Background cropping data augmentation
+#### Background cropping data augmentation
 ---
 Figure 1 below displays a typical image of the Stanford Cars-196 dataset pre- and post- backgrund cropping.
 
@@ -34,25 +34,26 @@ Figure 1 below displays a typical image of the Stanford Cars-196 dataset pre- an
 
 Each image featured excessive amounts of background noise. While boundary boxes were provided by the dataset, it was decided that a YOLO-based cropping detector would be more scalable under real-world data collection circumstances. Such a detector was implemented in Notebook 1, and the outputs collected and stored on Google Drive as inputs for Notebook 2.
 
-### Segmentation cropping data augmentation
+#### Segmentation cropping data augmentation
 ---
 While different classes of vehicles, i.e. sedans and SUV's, are visually distinct, vehicles within the same class are harder to distinguish. This was believed to have led to a poor initial validation accuracy of less than 50%. It was identfied that the primary feature differences between vehicle model and maker of the same type were in the front and rear, respectively. 
 
 To isolate this area from rest of the features within the raw image, a segmentation croppng preprocessing-function was implemented. Briefly, this worked by dividing the image into two sets of halves, determined by width and height, respectively. A quartering function was also evaluated but found to perform worse, which was attributed to the incomplete nature of each quarter.
 
 
-### Just-In-Time data augmentation
+#### Just-In-Time data augmentation
 ---
 Before the images were fed into our network, they underwent a set of preprocessing data-augmentation methods derived from the Keras and Tensorflow libraries designed to improve the performance and robustness of our model.
 
-Keras
+**Keras
+
 * Rescaling
 * Shear-based transformations
 * Zoom-based transformations
 * Translations
 * Flipping
 
-Tensorflow
+**Tensorflow
 
 * Hue randomization via HSV
 * Saturation randomization
@@ -61,7 +62,7 @@ Tensorflow
 
 
 
-### Architecture
+#### Architecture
 ---
 Our model consists of the base MobileNetV2 model, with the top layers relaced with a two densely connected layers (of size 1024 and 196, respectively), separated by a 50% dropout layer to prevent overfitting. The network was pre-loaded with ImageNet weights, and training was done using an ADAM optimizer at a learning rate of 0.0002, while fine-tuning was done using an RMSProp optimizer at a learning rate of 2E-5.
 
