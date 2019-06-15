@@ -5,8 +5,8 @@ This is a MobileNetV2 based submission for the Grab Ai For SEA Challenge 2- rapi
 The criteria for performance were as follows
 
 
-..*Accuracy
-..*Precision
-..*Recall
-..*Speed/performance (derived from discussions with judges during opening ceremony)
+* Accuracy
+* Precision
+* Recall
+* Speed/performance (derived from discussions with judges during opening ceremony)
 
