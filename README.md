@@ -10,3 +10,5 @@ The criteria for performance were as follows
 * Recall
 * Speed/performance (derived from discussions with judges during opening ceremony)
 
+As such, a MobileNetV2 based classifier was chosen due to the low number 
+
