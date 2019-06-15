@@ -10,7 +10,14 @@ The criteria for performance were as follows
 * Recall
 * Speed/performance (derived from discussions with judges during opening ceremony)
 
-As such, a MobileNetV2 based classifier was chosen due to its lightweight footprint, low number of parameters, and capability for near real-time mobile-based recognition. For instructions to run this repository, please see the "Instructions" section of this README.
+As such, a MobileNetV2 based classifier was chosen due to its lightweight footprint, low number of parameters, and capability for near real-time mobile-based recognition. 
+
+This repository consists of three Google Colaboratory Notebooks
+1. XXXX (Preprocessing)
+2. XXXX (Preprocessing & training)
+3. XXXX (Evaluation)
+
+For detailed instructions to run this repository, please see the "Instructions" section of this README.
 
 ## Dataset
 The Stanford Cars-196 dataset consists of 16185 images of automobiles of 196 classes. Despite it's large size, the number of images per class is relatively small, and as cars are visually highly similiar, this makes for a challenging exercise in make and model differentiation.
