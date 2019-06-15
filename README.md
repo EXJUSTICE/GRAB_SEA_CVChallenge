@@ -48,7 +48,7 @@ While different classes of vehicles, i.e. sedans and SUV's, are visually distinc
 To isolate this area from rest of the features within the raw image, a segmentation cropping-based functiono was implemented. Briefly, this worked by dividing the image into two sets of halves, determined by width and height, respectively. A quartering function was also evaluated but found to perform worse, which was attributed to the each quarter possessing incomplete feature information.
 
 
-#### __Just-In-Time processing__
+#### __Just-In-Time pre-processing__
 
 Before the images were fed into our network, they underwent a set of preprocessing data-augmentation methods derived from the Keras and Tensorflow libraries designed to improve the performance and robustness of our model. While the Keras-based methods focused on translations and transformations, the Tensorflow library provided more advanced capabilities to modify the colorspace.
 
