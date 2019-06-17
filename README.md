@@ -27,6 +27,14 @@ Notebook 3 loads in models trained using books 1 & 2 from Google Drive.
 
 For evaluation, it is suggested that the Judging team utilize book 3 on their custom dataset to generate the predictions together with confidence intervals.
 
+GDrive (Online as of 17-06-2019) Colaboratory instances of the notebooks can be found here:
+
+* https://drive.google.com/open?id=1exYHUnpYhTY-GswnnNJJP3R4KNTHi6Ea
+
+* https://drive.google.com/open?id=14UBY2iahaYq4EGa5HKDHC0uSZOt34omA
+
+* https://drive.google.com/open?id=1wOWeYKDEWt5Mk28fDwWUstNxUHvausVp
+
 ## Dataset
 The Stanford Cars-196 dataset consists of 16185 images of automobiles of 196 classes. Despite it's large size, the number of images per class is relatively small, and as cars are visually highly similiar, this makes for a challenging exercise in make and model differentiation.
 
