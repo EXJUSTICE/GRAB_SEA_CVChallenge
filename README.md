@@ -1,8 +1,8 @@
 # GRAB AI For SEA Computer Vision Challenge
 ## Optimizing a MobileNet classifier on the constrained Stanford Cars Dataset
 
-This is a MobileNetV2 based submission for the Grab Ai For SEA Challenge 2- rapid visual recognition of the Stanford Car Dataset.
-The criteria for performance were as follows
+This is a MobileNetV2 based submission for the Grab AI For SEA Challenge 2- rapid visual recognition of the Stanford Cars-196 Dataset.
+The criteria of submissions were:
 
 
 * Accuracy
