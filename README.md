@@ -94,5 +94,5 @@ As the car class of ImageNet is relatively small and varied, training of the bas
 
 A plot of accuracy and accuracy versus epochs during the inital training process is shown above.
 
-After training for 50 epochs, a mean validation acccuracy of 86.8% was achieved. After fine-tuning was executed for 15 epochs, this increased to 96 % and stabilized.
+After training for 50 epochs, a mean validation acccuracy of 85.3% was achieved. After fine-tuning was executed for 10 epochs, this increased to 89.6 % and stabilized.
 ## Instructions
