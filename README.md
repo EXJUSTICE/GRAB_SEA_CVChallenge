@@ -13,19 +13,19 @@ The criteria for performance were as follows
 As such, a MobileNetV2 based classifier was chosen due to its lightweight footprint, low number of parameters, and capability for near real-time mobile-based recognition. 
 
 This repository consists of three Google Colaboratory Notebooks
-1. XXXX (Preprocessing)
-2. XXXX (Preprocessing & training)
-3. XXXX (Evaluation)
-4. XXXX (Prediction)
+1. ImageAI crop (Preprocessing)
+2. Training, Finetuning, MobileNetV2 (Preprocessing & training)
+3. Prediction(Evaluation)
+
 
 For detailed instructions to run this repository, please see the "Instructions" section of this README.
 
 ## Instructions
-All Notebooks were run in Google's Colaboratory envrionment, with the GPU accelerator turned on. Notebook's 1 and 2 are provided to illustrate the preprocessing and training of the network, and can be rerun to replicate our results. Notebook 3 demonstrates the performance of our model on the Test dataset. Notebook 4 is designed to provide predictions for individual images, together with confidence intervals for each prediction.
+All Notebooks were run in Google's Colaboratory envrionment, with the GPU accelerator turned on. Notebook's 1 and 2 are provided to illustrate the preprocessing and training of the network, and can be rerun to replicate our results. Notebook 4 is designed to provide predictions for individual images, together with probabilities for each prediction.
 
-Notebooks 3 & 4 load in models trained using books 1 & 2 from Google Drive. 
+Notebook 3 loads in models trained using books 1 & 2 from Google Drive. 
 
-For evaluation, it is suggested that the Judging team utilize book 4 on their custom dataset to generate the predictions together with confidence intervals.
+For evaluation, it is suggested that the Judging team utilize book 3 on their custom dataset to generate the predictions together with confidence intervals.
 ## Dataset
 The Stanford Cars-196 dataset consists of 16185 images of automobiles of 196 classes. Despite it's large size, the number of images per class is relatively small, and as cars are visually highly similiar, this makes for a challenging exercise in make and model differentiation.
 
@@ -41,12 +41,8 @@ Our approach relied on extensive pre-processing data augmentation processes to i
 
 #### Background cropping data
 
-Figure 1 below displays a typical image of the Stanford Cars-196 dataset pre- and post- backgrund cropping.
 
-[Figure 1]
-
-
-Each image featured excessive amounts of background noise. While boundary boxes were provided by the dataset, it was decided that a YOLO-based cropping detector would be more scalable under real-world data collection circumstances. Such a detector was implemented in Notebook 1, and the outputs collected and stored on Google Drive as inputs for Notebook 2.
+As Each image featured excessive amounts of background noise. While boundary boxes were provided by the dataset, it was decided that a YOLO-based cropping detector would be more scalable under real-world data collection circumstances. Such a detector was implemented in Notebook 1, and the outputs collected and stored on Google Drive as inputs for Notebook 2.
 
 #### __Segmentation cropping__
 
