@@ -26,6 +26,7 @@ All Notebooks were run in Google's Colaboratory envrionment, with the GPU accele
 Notebook 3 loads in models trained using books 1 & 2 from Google Drive. 
 
 For evaluation, it is suggested that the Judging team utilize book 3 on their custom dataset to generate the predictions together with confidence intervals.
+
 ## Dataset
 The Stanford Cars-196 dataset consists of 16185 images of automobiles of 196 classes. Despite it's large size, the number of images per class is relatively small, and as cars are visually highly similiar, this makes for a challenging exercise in make and model differentiation.
 
@@ -41,11 +42,12 @@ Our approach relied on extensive pre-processing data augmentation processes to i
 
 #### Background cropping data
 
-
 As Each image featured excessive amounts of background noise. While boundary boxes were provided by the dataset, it was decided that a YOLO-based cropping detector would be more scalable under real-world data collection circumstances. Such a detector was implemented in Notebook 1, and the outputs collected and stored on Google Drive as inputs for Notebook 2.
 
 #### __Segmentation cropping__
-
+<p align="center">
+  <img src="https://github.com/EXJUSTICE/GRAB_SEA_CVChallenge/blob/master/example.jpg" >
+</p>
 While different classes of vehicles, i.e. sedans and SUV's, are visually distinct, vehicles within the same class are harder to distinguish. This was believed to have led to a poor initial validation accuracy of less than 50%. It was identfied that the primary feature differences between vehicle model and maker of the same type were in the front and rear, respectively. 
 
 To isolate this area from rest of the features within the raw image, a segmentation cropping-based functiono was implemented. Briefly, this worked by dividing the image into two sets of halves, determined by width and height, respectively. A quartering function was also evaluated but found to perform worse, which was attributed to the each quarter possessing incomplete feature information.
